@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddEditHike">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp">
+<!--        android:layout_centerInParent="true">-->
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/pfp"
+            android:src="@drawable/baseline_person_3_24"/>
+        <EditText
+            android:id="@+id/hikenametxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hike name"
+            android:textColorHint="@color/black"
+            android:background="@drawable/background_input_field"
+            android:padding="5dp"
+            android:layout_marginTop="15dp"
+            />
+        <EditText
+            android:id="@+id/locationtxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:textColorHint="@color/black"
+            android:background="@drawable/background_input_field"
+            android:padding="5dp"
+            android:layout_marginTop="15dp"/>
+
+        <DatePicker
+            android:id="@+id/datepickertxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parking avaialable"
+            android:textColor="@color/black"
+            android:textSize="15dp"/>
+
+        <RadioGroup
+            android:id="@+id/BtngroupParking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/radioBtnYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parking available"
+                android:textSize="15dp"/>
+
+            <RadioButton
+                android:id="@+id/radioBtnNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No parking available"
+                android:textSize="15dp"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/lengthtxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_input_field"
+            android:hint="Length of hike"
+            android:padding="5dp"
+            android:textColorHint="@color/black" />
+
+        <Spinner
+            android:id="@+id/level"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/Level"
+            android:textSize="15dp"
+            />
+        <EditText
+            android:id="@+id/desctxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:hint="Description"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="TODO"
+        android:elevation="10dp"
+        android:src="@drawable/baseline_add_24"
+        app:pressedTranslationZ="10dp"
+        app:tint="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CW1</string>
+    <string-array name="Level">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+        <item>Advanced</item>
+    </string-array>
+</resources>
